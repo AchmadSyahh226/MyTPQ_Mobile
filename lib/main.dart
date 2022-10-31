@@ -42,6 +42,169 @@ class _MyTPQState extends State<MyTPQ> {
           ],
         ),
       ),
+      body: Container(
+          padding: EdgeInsets.all(30),
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: <Widget>[
+              MyMenu1(),
+              MyMenu2(),
+              MyMenu3(),
+              MyMenu4(),
+              MyMenu5(),
+            ],
+          )
+        ),
+    );
+  }
+}
+
+class MyMenu1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return Card(
+      margin: EdgeInsets.all(8),
+      child: InkWell(
+        onTap: () {},
+        splashColor: Colors.blue[700],
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.business,
+              size: 80,
+              color: Colors.brown,
+            ),
+            Text("MyTPQ Profil",
+                style: new TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ))
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class MyMenu2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return Card(
+      margin: EdgeInsets.all(8),
+      child: InkWell(
+        onTap: () {},
+        splashColor: Colors.blue[700],
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.note_add,
+              size: 80,
+              color: Colors.grey,
+            ),
+            Text("SPP",
+                style: new TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ))
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class MyMenu3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return Card(
+      margin: EdgeInsets.all(8),
+      child: InkWell(
+        onTap: () {},
+        splashColor: Colors.blue[700],
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.menu_book,
+              size: 80,
+              color: Colors.blueGrey,
+            ),
+            Text("Buku Panduan",
+                style: new TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ))
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class MyMenu4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return Card(
+      margin: EdgeInsets.all(8),
+      child: InkWell(
+        onTap: () {},
+        splashColor: Colors.blue[700],
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.place,
+              size: 80,
+              color: Colors.lightGreen,
+            ),
+            Text("Lokasi",
+                style: new TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ))
+          ],
+        )),
+      ),
+    );
+  }
+}
+
+class MyMenu5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return Card(
+      margin: EdgeInsets.all(8),
+      child: InkWell(
+        onTap: () {},
+        splashColor: Colors.blue[700],
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Icon(
+              Icons.info,
+              size: 80,
+              color: Colors.red,
+            ),
+            Text("Tentang",
+                style: new TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ))
+          ],
+        )),
+      ),
     );
   }
 }
