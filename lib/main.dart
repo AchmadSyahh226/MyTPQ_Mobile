@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytpqmobile/profiltpq.dart';
 void main() => runApp(const MaterialApp(
       home: MyTPQ(),
     ));
@@ -34,12 +35,12 @@ class _MyTPQState extends State<MyTPQ> {
           padding: const EdgeInsets.all(30),
           child: GridView.count(
             crossAxisCount: 2,
-            children: <Widget>[
-              const MyMenu1(),
-              const MyMenu2(),
-              const MyMenu3(),
-              const MyMenu4(),
-              const MyMenu5(),
+            children: const <Widget>[
+              MyMenu1(),
+              MyMenu2(),
+              MyMenu3(),
+              MyMenu4(),
+              MyMenu5(),
             ],
           )
         ),
@@ -56,18 +57,19 @@ class MyMenu1 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => const MyTpqProfil())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const Icon(
+          children: const <Widget>[
+            Icon(
               Icons.business,
               size: 80,
               color: Colors.brown,
             ),
-            const Text("MyTPQ Profil",
+            Text("MyTPQ Profil",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -93,13 +95,13 @@ class MyMenu2 extends StatelessWidget {
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const Icon(
+          children: const <Widget>[
+            Icon(
               Icons.note_add,
               size: 80,
               color: Colors.grey,
             ),
-            const Text("SPP",
+            Text("SPP",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
