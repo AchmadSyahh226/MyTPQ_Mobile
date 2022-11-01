@@ -45,6 +45,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_pdfview: ^1.0.4 #display pdf
+  http: ^0.12.2 #download pdf
+  #path
+  file_picker: ^2.1.6
+  path: ^1.7.0
+  path_provider: ^1.6.27
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
