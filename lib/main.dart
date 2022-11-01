@@ -25,19 +25,7 @@ class _MyTPQState extends State<MyTPQ> {
           children: const <Widget>[
             ListTile(
               leading: Icon(Icons.person),
-              title: Text("Profil Akun"),
-            ),
-            ListTile(
-              leading: Icon(Icons.key),
-              title: Text("Ubah Kata Sandi"),
-            ),
-            ListTile(
-              leading: Icon(Icons.info),
-              title: Text("Tentang"),
-            ),
-            ListTile(
-              leading: Icon(Icons.logout),
-              title: Text("Keluar"),
+              title: Text("TPQ Darul Falihin"),
             ),
           ],
         ),
