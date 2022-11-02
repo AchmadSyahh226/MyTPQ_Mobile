@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mytpqmobile/profiltpq.dart';
+import 'package:mytpqmobile/spp.dart';
 void main() => runApp(const MaterialApp(
       home: MyTPQ(),
     ));
@@ -90,7 +91,8 @@ class MyMenu2 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => const bayarSPP())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
