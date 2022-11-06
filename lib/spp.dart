@@ -1,4 +1,11 @@
+
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:path_provider/path_provider.dart';
 
 class bayarSPP extends StatefulWidget {
   const bayarSPP({Key? key}) : super(key: key);
@@ -8,7 +15,6 @@ class bayarSPP extends StatefulWidget {
 }
 
 class _bayarSPPState extends State<bayarSPP> {
-
   TextEditingController controllerTanggal = TextEditingController();
   TextEditingController controllerNamaTerima = TextEditingController();
   TextEditingController controllerNamaSantri = TextEditingController();
@@ -70,11 +76,43 @@ class _bayarSPPState extends State<bayarSPP> {
               const Padding(
                 padding: EdgeInsets.all(10.0),
               ),
-              ElevatedButton(onPressed: () {}, child: const Text("PRINT",)),
+              ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "PRINT",
+                  )),
             ]),
           ],
         ),
       ),
     );
   }
+}
+
+void getPDF() async {
+  //buat class pdf
+  final pdf = pw.Document();
+
+  //buat page
+  pdf.addPage(
+    pw.Page(
+      pageFormat: PdfPageFormat.a4,
+      build: (pw.Context context) {
+        return pw.Center(
+          child: pw.Text("Hello World"),
+        ); // Center
+      },
+    ),
+  ); // Page
+
+  // simpan pdf
+  Uint8List bytes = await pdf.save();
+
+  //buat file kosong di directory
+  final dir = await getApplicationDocumentsDirectory();
+  final file = File('${dir.path}/myinvoice.pdf');
+
+  //timpa file kosong
+  await file.writeAsBytes(bytes);
+
 }
