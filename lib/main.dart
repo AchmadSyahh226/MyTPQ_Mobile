@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytpqmobile/lokasi.dart';
 import 'package:mytpqmobile/profiltpq.dart';
 import 'package:mytpqmobile/spp.dart';
 void main() => runApp(const MaterialApp(
@@ -156,7 +157,8 @@ class MyMenu4 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => const MyLocation())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
