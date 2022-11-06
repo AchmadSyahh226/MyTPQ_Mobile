@@ -13,6 +13,7 @@ class _MyTpqProfilState extends State<MyTpqProfil> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Profil TPQ"),
+          backgroundColor: Colors.blue[900],
         ),
         body: Container(
           padding: const EdgeInsets.all(20),
