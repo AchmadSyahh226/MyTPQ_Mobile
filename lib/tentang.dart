@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyTpqProfil extends StatefulWidget {
-  const MyTpqProfil({Key? key}) : super(key: key);
+class MyTpqtentang extends StatefulWidget {
+  const MyTpqtentang({Key? key}) : super(key: key);
 
   @override
-  State<MyTpqProfil> createState() => _MyTpqProfilState();
+  State<MyTpqtentang> createState() => _MyTpqtentangState();
 }
 
-class _MyTpqProfilState extends State<MyTpqProfil> {
+class _MyTpqtentangState extends State<MyTpqtentang> {
   @override
   Widget build(BuildContext context) {
     // ui tampilan awal
@@ -27,7 +27,7 @@ class _MyTpqProfilState extends State<MyTpqProfil> {
               children: [
                 Text(""),
                 Text(
-                  'Profil TPQ',
+                  'Tentang My TPQ',
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -44,47 +44,43 @@ class _MyTpqProfilState extends State<MyTpqProfil> {
             child: Center(
               child: Column(
                 children: const <Widget>[
-                  Text("TPQ Darul Falihin"),
-                  Text("Berdiri : 2006"),
-                  Text("No. Statistik : 411.2.35.78.0445"),
-                  Text("Kepala TPQ : Farid Mashudi S.Pd.I."),
-                  Text("Metode pengajaran : An-Nahdliyah"),
+                  Text("Kelompok 9"),
+                  Text("21050974004 Achmad Syahrul Ramadhan"),
+                  Text("21050974008 Dina Amilia"),
+                  Text("21050974036 Muhammad Catur Rizaldi Bahtiar"),
+                  Text("21050974056 Adinda Amelia Putri"),
                   Text(
-                    "Metode ini terbukti sangat efektif, efisien, mudah dipahami sehingga memudahkan belajar membaca Al-Quran dengan benar.",
+                    "",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text("Isi Aplikasi My TPQ: "),
+                  Text(
+                    "1. My TPQ Profil (berisi profil TPQ serta visi dan misinya)",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "2. Buku Panduan (berisi doa pembuka awal saat mengaji, niat sholat, bacaan sholat dan ayat kursi))",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "3. SPP (berisi form pendataan murid yang mau membayar spp dan pencetakkan kwitansi)",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "4. Lokasi (berisi data alamat TPQ dan link google maps)",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "5. Tentang (berisi nama kelompok pembuat aplikasi setra isi dan fungsi aplikasi)",
                     textAlign: TextAlign.center,
                   ),
                   Text(
                     "",
                     textAlign: TextAlign.center,
                   ),
-                  Text("Visi : "),
+                  Text("Fungsi Aplikasi My TPQ : "),
                   Text(
-                    "Terciptanya generasi Qur'ani, berakhlakul karimah, berprestasi, berdasarkan IMTAQ dan bermanfaat bagi umat.",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text("Misi : "),
-                  Text(
-                    "1. Mengajarkan bacaan Al-Quran sesuai ilmu tajwid.",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "2. Membekali santri lebih memperdalam ajaran Islam pada jenjang selanjutnya.",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "3. Menanamkan sikap keimanan, keislaman, ketaqwaan sejak dini serta membiasakan santri berperilaku baik, sopan terhadap guru, orang tua, dan sesama.",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "4. Melestarikan tradisi ilmiah dan amaliah salafus shalih.",
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "5. Meningkatkan minat dan bakat santri dalam berkompetisi untuk meningkatkan prestasi.",
+                    "kami berharap aplikasi My TPQ ini dapat membantu mempermudah pencetakan dalam pembayaran spp dan sebagai pedoman saat mengaji.",
                     textAlign: TextAlign.center,
                   ),
                 ],
