@@ -12,8 +12,30 @@ class _MyLocationState extends State<MyLocation> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Lokasi"),
-          backgroundColor: Colors.blue[900],
+          backgroundColor: const Color.fromARGB(255, 110, 137, 159),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 32, 81, 121),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(327.0),
+                )),
+            height: 150,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(""),
+                Text(
+                  'Lokasi',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 167, 205, 209),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
         body: Container(
           padding: const EdgeInsets.all(20),
