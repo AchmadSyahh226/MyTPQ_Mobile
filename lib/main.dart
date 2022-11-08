@@ -35,7 +35,7 @@ class _MyTPQState extends State<MyTPQ> {
             children: const [
               Text(""),
               Text(
-                'Aplikasi My TPQ',
+                'Aplikasi MyTPQ',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
