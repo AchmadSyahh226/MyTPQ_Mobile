@@ -21,9 +21,9 @@ class _MyTPQState extends State<MyTPQ> {
     // ui tampilan awal
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 110, 137, 159),
+        backgroundColor: const Color.fromARGB(255, 110, 137, 159),
         flexibleSpace: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Color.fromARGB(255, 32, 81, 121),
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(327.0),
@@ -32,7 +32,7 @@ class _MyTPQState extends State<MyTPQ> {
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(""),
               Text(
                 'Aplikasi My TPQ',

@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
@@ -26,9 +25,9 @@ class _bayarSPPState extends State<bayarSPP> {
     // ui tampilan awal
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 110, 137, 159),
+        backgroundColor: const Color.fromARGB(255, 110, 137, 159),
         flexibleSpace: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Color.fromARGB(255, 32, 81, 121),
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(327.0),
@@ -37,7 +36,7 @@ class _bayarSPPState extends State<bayarSPP> {
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(""),
               Text(
                 'Form SPP',
