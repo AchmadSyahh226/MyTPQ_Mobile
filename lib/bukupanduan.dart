@@ -99,7 +99,7 @@ class MyMenu2 extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.bookmark_border,
+              Icons.man,
               size: 80,
               color: Colors.grey,
             ),
@@ -161,9 +161,9 @@ class MyMenu4 extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.water,
+              Icons.dry,
               size: 80,
-              color: Color.fromARGB(255, 1, 109, 252),
+              color: Color.fromARGB(249, 62, 146, 255),
             ),
             Text("Niat Wudhu",
                 style: TextStyle(

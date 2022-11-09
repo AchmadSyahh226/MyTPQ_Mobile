@@ -89,7 +89,7 @@ class MyMenu1 extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.business,
+              Icons.school_outlined,
               size: 80,
               color: Colors.brown,
             ),
