@@ -59,7 +59,7 @@ class _MyTpqtentangState extends State<MyTpqtentang> {
                     textAlign: TextAlign.center,
                   ),
                   Text(
-                    "2. Buku Panduan (berisi doa pembuka awal saat mengaji, niat sholat, bacaan sholat dan ayat kursi))",
+                    "2. Buku Panduan (berisi doa pembuka awal saat mengaji, niat sholat, bacaan sholat dan niat wudhu))",
                     textAlign: TextAlign.center,
                   ),
                   Text(

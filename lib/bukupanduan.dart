@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:mytpqmobile/bukupanduan.dart';
-import 'package:mytpqmobile/lokasi.dart';
-import 'package:mytpqmobile/profiltpq.dart';
-import 'package:mytpqmobile/spp.dart';
-import 'package:mytpqmobile/tentang.dart';
 
-void main() => runApp(const MaterialApp(
-      home: MyTPQ(),
-    ));
-
-class MyTPQ extends StatefulWidget {
-  const MyTPQ({Key? key}) : super(key: key);
+class Mybukupanduan extends StatefulWidget {
+  const Mybukupanduan({Key? key}) : super(key: key);
 
   @override
-  State<MyTPQ> createState() => _MyTPQState();
+  State<Mybukupanduan> createState() => _Mybukupanduan();
 }
 
-class _MyTPQState extends State<MyTPQ> {
+class _Mybukupanduan extends State<Mybukupanduan> {
   @override
   Widget build(BuildContext context) {
     // ui tampilan awal
@@ -36,7 +27,7 @@ class _MyTPQState extends State<MyTPQ> {
             children: const [
               Text(""),
               Text(
-                'Aplikasi MyTPQ',
+                'Buku Panduan',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -45,16 +36,6 @@ class _MyTPQState extends State<MyTPQ> {
               ),
             ],
           ),
-        ),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: const <Widget>[
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text("TPQ Darul Falihin"),
-            ),
-          ],
         ),
       ),
       body: Container(
@@ -66,7 +47,6 @@ class _MyTPQState extends State<MyTPQ> {
               MyMenu2(),
               MyMenu3(),
               MyMenu4(),
-              MyMenu5(),
             ],
           )),
     );
@@ -81,19 +61,18 @@ class MyMenu1 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const MyTpqProfil())),
+        onTap: () {},
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.business,
+              Icons.book,
               size: 80,
-              color: Colors.brown,
+              color: Color.fromARGB(255, 102, 167, 59),
             ),
-            Text("MyTPQ Profil",
+            Text("Doa Pembukaan",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -113,19 +92,18 @@ class MyMenu2 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const bayarSPP())),
+        onTap: () {},
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.note_add,
+              Icons.bookmark_border,
               size: 80,
               color: Colors.grey,
             ),
-            Text("SPP",
+            Text("Niat Sholat",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -145,19 +123,18 @@ class MyMenu3 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const Mybukupanduan())),
+        onTap: () {},
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.menu_book,
+              Icons.mosque_outlined,
               size: 80,
-              color: Colors.blueGrey,
+              color: Color.fromARGB(255, 13, 14, 1),
             ),
-            Text("Buku Panduan",
+            Text("Bacaan Sholat",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -177,51 +154,18 @@ class MyMenu4 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const MyLocation())),
+        onTap: () {},
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const <Widget>[
             Icon(
-              Icons.place,
+              Icons.water,
               size: 80,
-              color: Colors.lightGreen,
+              color: Color.fromARGB(255, 1, 109, 252),
             ),
-            Text("Lokasi",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ))
-          ],
-        )),
-      ),
-    );
-  }
-}
-
-class MyMenu5 extends StatelessWidget {
-  const MyMenu5({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.all(8),
-      child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const MyTpqtentang())),
-        splashColor: Colors.blue[700],
-        child: Center(
-            child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: const <Widget>[
-            Icon(
-              Icons.info,
-              size: 80,
-              color: Colors.red,
-            ),
-            Text("Tentang",
+            Text("Niat Wudhu",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
