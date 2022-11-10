@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:open_file/open_file.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
@@ -101,7 +102,7 @@ class _bayarSPPState extends State<bayarSPP> {
                 padding: EdgeInsets.all(10.0),
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => getPDF(),
                   child: const Text(
                     "PRINT",
                   )),
@@ -139,4 +140,6 @@ void getPDF() async {
   //timpa file kosong
   await file.writeAsBytes(bytes);
   
+  // buka pdf
+  await OpenFile.open(file.path);
 }
