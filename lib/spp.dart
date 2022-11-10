@@ -6,15 +6,14 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
 
-class bayarSPP extends StatefulWidget {
-  const bayarSPP({Key? key}) : super(key: key);
+class BayarSPP extends StatefulWidget {
+  const BayarSPP({Key? key}) : super(key: key);
 
   @override
-  State<bayarSPP> createState() => _bayarSPPState();
+  State<BayarSPP> createState() => _bayarSPPState();
 }
 
-class _bayarSPPState extends State<bayarSPP> {
-  TextEditingController controllerTanggal = TextEditingController();
+class _bayarSPPState extends State<BayarSPP> {
   TextEditingController controllerNamaTerima = TextEditingController();
   TextEditingController controllerNamaSantri = TextEditingController();
   TextEditingController controllerJenisByr = TextEditingController();
@@ -56,13 +55,6 @@ class _bayarSPPState extends State<bayarSPP> {
         child: ListView(
           children: <Widget>[
             Column(children: <Widget>[
-              TextField(
-                controller: controllerTanggal,
-                decoration: const InputDecoration(
-                  hintText: "Hari/tanggal",
-                  label: Text("Hari/tanggal"),
-                ),
-              ),
               TextField(
                 controller: controllerNamaTerima,
                 decoration: const InputDecoration(
@@ -123,9 +115,31 @@ void getPDF() async {
     pw.Page(
       pageFormat: PdfPageFormat.a4,
       build: (pw.Context context) {
-        return pw.Center(
-          child: pw.Text("Hello World"),
-        ); // Center
+        return pw.Column(
+          children: [
+            pw.Container(
+                alignment: pw.Alignment.center,
+                width: double.infinity,
+                child: pw.Text("KWITANSI",
+                    style: pw.TextStyle(
+                        fontSize: 50, fontWeight: pw.FontWeight.bold))),
+            pw.Container(
+                alignment: pw.Alignment.center,
+                width: double.infinity,
+                child: pw.Text("${DateTime.now()} \n\n\n",
+                    style: const pw.TextStyle(fontSize: 20))),
+            pw.Container(
+                alignment: pw.Alignment.centerLeft,
+                width: double.infinity,
+                child: pw.Text(
+                    "Nama Penerima : \n"
+                    "Nama Santri : \n"
+                    "Jenis Pembayaran : SPP\n"
+                    "Jumlah Bayar : \n"
+                    "Bulan : \n",
+                    style: const pw.TextStyle(fontSize: 30))),
+          ],
+        );
       },
     ),
   ); // Page
@@ -139,7 +153,7 @@ void getPDF() async {
 
   //timpa file kosong
   await file.writeAsBytes(bytes);
-  
+
   // buka pdf
   await OpenFile.open(file.path);
 }
