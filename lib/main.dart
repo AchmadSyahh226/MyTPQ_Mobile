@@ -114,7 +114,7 @@ class MyMenu2 extends StatelessWidget {
       margin: const EdgeInsets.all(8),
       child: InkWell(
         onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const bayarSPP())),
+            builder: (BuildContext context) => const BayarSPP())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
