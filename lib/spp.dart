@@ -39,7 +39,7 @@ class _bayarSPPState extends State<BayarSPP> {
             children: const [
               Text(""),
               Text(
-                'Form SPP',
+                'Pembayaran',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -119,6 +119,7 @@ void getPDF() async {
           children: [
             pw.Container(
                 alignment: pw.Alignment.center,
+                color: PdfColors.green600,
                 width: double.infinity,
                 child: pw.Text("KWITANSI",
                     style: pw.TextStyle(
@@ -132,12 +133,21 @@ void getPDF() async {
                 alignment: pw.Alignment.centerLeft,
                 width: double.infinity,
                 child: pw.Text(
-                    "Nama Penerima : \n"
-                    "Nama Santri : \n"
-                    "Jenis Pembayaran : SPP\n"
-                    "Jumlah Bayar : \n"
+                    "\n\n"
+                    "Penerima : \n\n"
+                    "Nama Santri : \n\n"
+                    "Jenis Pembayaran : SPP\n\n"
+                    "Jumlah Bayar : \n\n"
                     "Bulan : \n",
-                    style: const pw.TextStyle(fontSize: 30))),
+                    style: const pw.TextStyle(fontSize: 25))),
+            pw.Container(
+                alignment: pw.Alignment.bottomRight,
+                width: double.infinity,
+                child: pw.Text(
+                    "\n\n\n\n\n\n\n\n\n\n\n\n\nTTD \n"
+                    "\n\n"
+                    "Penerima",
+                    style: const pw.TextStyle(fontSize: 25))),
           ],
         );
       },
