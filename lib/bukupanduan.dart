@@ -61,7 +61,8 @@ class MyMenu1 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => const DoaAwal())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
@@ -174,5 +175,86 @@ class MyMenu4 extends StatelessWidget {
         )),
       ),
     );
+  }
+}
+
+class DoaAwal extends StatefulWidget {
+  const DoaAwal({Key? key}) : super(key: key);
+
+  @override
+  State<DoaAwal> createState() => _DoaAwalState();
+}
+
+class _DoaAwalState extends State<DoaAwal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 110, 137, 159),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 32, 81, 121),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(327.0),
+                )),
+            height: 150,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(""),
+                Text(
+                  'Doa Pembukaan',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 167, 205, 209),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(20),
+          child: Card(
+            child: Center(
+              child: Column(
+                children: const <Widget>[
+                  Text(
+                    "Pembukaan\n",
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                      "1. Salaaman\n"
+                      "2. Isti'daadan (Siap)\n"
+                      "3. Doa Masuk Masjid : \n"
+                      "اَللّٰهُمَّ افْتَحْ لِيْ اَبْوَابَ رَحْمَتِكَ"
+                      "\n4. Khusyu'an (Tenang dan fokus) \n"
+                      "5. Duaa'an (Berdoa) \n"
+                      "6. Membaca Al-Fatihah \n"
+                      "7. Doa Pembuka Hati & Doa Belajar \n",
+                      textAlign: TextAlign.left),
+                  Text(
+                      " رَضِيْتُ بِاللهِ رَبًّا، وَبِالإِسْلَامِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا وَرَسُوْلًا"
+                      "  رَبِّ ٱشْرَحْ لِى صَدْرِى وَيَسِّرْ لِىٓ أَمْرِى وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِى يَفْقَهُوا۟ قَوْلِى"
+                      "رَبِّ زِدْنِي عِلْمًا، وَارْزُقْنِيْ فَهْمًا \n",
+                      textAlign: TextAlign.center),
+                  Text(
+                      "8. Membaca Doa Iftitah\n"
+                      "9. Membaca Sholawat Thibbil Quluub\n"
+                      "10. Membaca Sholawat Nariyah\n"
+                      "َ11. Membaca Sholawat Asyghil\n"
+                      "12. Membaca Asmaul Husnaa \n"
+                      "13. Membaca Sholawat Maulaya \n"
+                      "14. Infaq \n"
+                      "15. Pengumuman \n"
+                      "16. Mengaji sesuai jilid masing-masing \n",
+                      textAlign: TextAlign.left),
+                ],
+              ),
+            ),
+          ),
+        ));
   }
 }
