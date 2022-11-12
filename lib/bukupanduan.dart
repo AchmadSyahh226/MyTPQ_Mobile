@@ -71,7 +71,7 @@ class MyMenu1 extends StatelessWidget {
             Icon(
               Icons.book,
               size: 80,
-              color: Color.fromARGB(255, 102, 167, 59),
+              color: Color.fromARGB(255, 244, 58, 2),
             ),
             Text("Doa Pembukaan",
                 style: TextStyle(
@@ -93,7 +93,8 @@ class MyMenu2 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => const NiatSholat())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
@@ -102,7 +103,7 @@ class MyMenu2 extends StatelessWidget {
             Icon(
               Icons.man,
               size: 80,
-              color: Colors.grey,
+              color: Color.fromARGB(255, 86, 86, 86),
             ),
             Text("Niat Sholat",
                 style: TextStyle(
@@ -124,7 +125,8 @@ class MyMenu3 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => const PanduanSholat())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
@@ -135,7 +137,7 @@ class MyMenu3 extends StatelessWidget {
               size: 80,
               color: Color.fromARGB(255, 13, 14, 1),
             ),
-            Text("Bacaan Sholat",
+            Text("Panduan Sholat",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -164,9 +166,9 @@ class MyMenu4 extends StatelessWidget {
             Icon(
               Icons.dry,
               size: 80,
-              color: Color.fromARGB(249, 62, 146, 255),
+              color: Color.fromARGB(248, 18, 81, 163),
             ),
-            Text("Niat Wudhu",
+            Text("Panduan Wudhu",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -221,10 +223,9 @@ class _DoaAwalState extends State<DoaAwal> {
             child: Center(
               child: Column(
                 children: const <Widget>[
-                  Text(
-                    "Pembukaan\n",
-                    textAlign: TextAlign.center,
-                  ),
+                  Text("Pembukaan\n",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
                       "1. Salaaman\n"
                       "2. Isti'daadan (Siap)\n"
@@ -250,6 +251,147 @@ class _DoaAwalState extends State<DoaAwal> {
                       "14. Infaq \n"
                       "15. Pengumuman \n"
                       "16. Mengaji sesuai jilid masing-masing \n",
+                      textAlign: TextAlign.left),
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+class NiatSholat extends StatefulWidget {
+  const NiatSholat({Key? key}) : super(key: key);
+
+  @override
+  State<NiatSholat> createState() => _NiatSholatState();
+}
+
+class _NiatSholatState extends State<NiatSholat> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 110, 137, 159),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 32, 81, 121),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(327.0),
+                )),
+            height: 150,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(""),
+                Text(
+                  'Niat Sholat',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 167, 205, 209),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(20),
+          child: Card(
+            child: Center(
+              child: Column(
+                children: const <Widget>[
+                  Text(
+                    "Niat Sholat FARDHU",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                      "\n1. SHOLAT SUBUH"
+                      "\n أُصَلِّى فَرْضَ الصُّبْح رَكَعتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
+                      "\n2. SHOLAT DHUHUR"
+                      "\n اُصَلِّيْ فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
+                      "\n3. SHOLAT ASHAR"
+                      "\n أُصَلِّى فَرْضَ العَصْرِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
+                      "\n4. SHOLAT MAGHRIB"
+                      "\n أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ"
+                      "\n5. SHOLAT ISYA"
+                      "\n أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
+                      textAlign: TextAlign.left),
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+class PanduanSholat extends StatefulWidget {
+  const PanduanSholat({Key? key}) : super(key: key);
+
+  @override
+  State<PanduanSholat> createState() => _PanduanSholatState();
+}
+
+class _PanduanSholatState extends State<PanduanSholat> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 110, 137, 159),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 32, 81, 121),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(327.0),
+                )),
+            height: 150,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(""),
+                Text(
+                  'Panduan Sholat',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 167, 205, 209),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(20),
+          child: Card(
+            child: Center(
+              child: Column(
+                children: const <Widget>[
+                  Text("PANDUAN SHOLAT",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text("\nSyarat Sholat \n", textAlign: TextAlign.left),
+                  Text(
+                      "1. Beragama Islam\n"
+                      "2. Mumayyiz\n"
+                      "3. Sudah masuk waktu shalat\n"
+                      "4. Mengetahui fardhu-fardhu shalat\n"
+                      "5. Suci dari hadats kecil, besar, & najis\n"
+                      "6. Menutup aurat bagi yang mampu\n"
+                      "7. Menghadap kiblat\n"
+                      "8. Tidak banyak bergerak selain gerakan shalat\n"
+                      "9. Tidak sambil makan dan minum\n"
+                      "10. Tidak dalam keraguan\n"
+                      "11. Tidak menggantungkan kebatalan shalatnya dengan sesuatu apa pun\n",
+                      textAlign: TextAlign.left),
+                  Text("\nRukun Sholat \n", textAlign: TextAlign.left),
+                  Text(
+                      "Niat, takbiratulihram sambil memasang niat, berdiri jika mampu, membaca Al-fatihah, ruku', i'tidal,"
+                      "sujud, duduk diantara dua sujud, thuma'ninah, tasyahud akhir, membaca sholawat nabi, salam, tertib.",
                       textAlign: TextAlign.left),
                 ],
               ),
