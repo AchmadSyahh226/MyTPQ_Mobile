@@ -157,7 +157,8 @@ class MyMenu4 extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(8),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => const PanduanWudhu())),
         splashColor: Colors.blue[700],
         child: Center(
             child: Column(
@@ -393,6 +394,74 @@ class _PanduanSholatState extends State<PanduanSholat> {
                       "Niat, takbiratulihram sambil memasang niat, berdiri jika mampu, membaca Al-fatihah, ruku', i'tidal,"
                       "sujud, duduk diantara dua sujud, thuma'ninah, tasyahud akhir, membaca sholawat nabi, salam, tertib.",
                       textAlign: TextAlign.left),
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+class PanduanWudhu extends StatefulWidget {
+  const PanduanWudhu({Key? key}) : super(key: key);
+
+  @override
+  State<PanduanWudhu> createState() => _PanduanWudhuState();
+}
+
+class _PanduanWudhuState extends State<PanduanWudhu> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 110, 137, 159),
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(255, 32, 81, 121),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(327.0),
+                )),
+            height: 150,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(""),
+                Text(
+                  'Panduan Wudhu',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 167, 205, 209),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(20),
+          child: Card(
+            child: Center(
+              child: Column(
+                children: const <Widget>[
+                  Text("Tata Cara Wudhu\n",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text(
+                      "1. Membaca basmalah\n"
+                      "2. Cuci tangan sampai ke pergelangan tangan 3x\n"
+                      "3. Kumur-kumur 3x\n"
+                      "4. Memasukkan air ke dalam hidung 3x\n"
+                      "5. Membaca niat wudhu : \n"
+                      "نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ اْلاَصْغَرِ فَرْضًا ِللهِ تَعَالَى\n"
+                      "6. Cuci muka 3x, dari garis rambut ke dagu dan dari telinga ke telinga, pastikan seluruh wajah, alis, bawah hidung dan bibir dicuci\n"
+                      "7. Cuci lengan dan tangan dari ujung jari sampai siku 3x\n"
+                      "8. Usap kepala mulai dengan tangan di depan kepala, bawa ke belakang kepala dan kemudian kembali ke depan lagi 3x\n"
+                      "9. Cuci kaki 3x hingga mata kaki, pastikan untuk menyeka sela-sela jari kaki dengan jari kelingking\n"
+                      "10. Akhiri wudhu dengan doa : \n"
+                      "َ اشْهَدُ أَنْ لَاإِلٰهَ إِلَّااللهُ وَحْدَهُ لَاشَرِيْكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًاعَبْدُهُ وَرَسُوْلُهُ. اَللّٰهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ وَجْعَلْنِيْ مِنْ عِبَادِكَ الصَّالِحِيْنَ\n",
+                      textAlign: TextAlign.left)
                 ],
               ),
             ),
