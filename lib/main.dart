@@ -125,7 +125,7 @@ class MyMenu2 extends StatelessWidget {
               size: 80,
               color: Colors.grey,
             ),
-            Text("SPP",
+            Text("Pembayaran",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
