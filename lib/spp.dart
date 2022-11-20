@@ -2,9 +2,10 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
-import 'package:pdf/pdf.dart';
+import 'package:pdf/pdf.dart' as pd;
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
+import 'package:input_form_field/input_form_field.dart';
 
 class BayarSPP extends StatefulWidget {
   const BayarSPP({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class BayarSPP extends StatefulWidget {
   State<BayarSPP> createState() => _bayarSPPState();
 }
 
+// ignore: camel_case_types
 class _bayarSPPState extends State<BayarSPP> {
   TextEditingController controllerNamaTerima = TextEditingController();
   TextEditingController controllerNamaSantri = TextEditingController();
@@ -55,40 +57,90 @@ class _bayarSPPState extends State<BayarSPP> {
         child: ListView(
           children: <Widget>[
             Column(children: <Widget>[
-              TextField(
-                controller: controllerNamaTerima,
-                decoration: const InputDecoration(
-                  hintText: "Nama Penerima",
-                  label: Text("Nama Penerima"),
-                ),
+              const Padding(padding: EdgeInsets.all(10.0)),
+              InputFormField(
+                textEditingController: controllerNamaTerima,
+                labelText: "Penerima",
+                hintText: "Masukkan nama penerima (huruf kapital)",
+                hintTextStyle: const TextStyle(fontSize: 15),
+                borderColor: Colors.blue,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                borderRadius: BorderRadius.circular(10),
+                errorPadding: const EdgeInsets.only(left: 10, top: 10),
+                validator: (v) {
+                  if (v != null && v.isEmpty) {
+                    return "Required";
+                  }
+                  return null;
+                },
               ),
-              TextField(
-                controller: controllerNamaSantri,
-                decoration: const InputDecoration(
-                  hintText: "Nama Santri",
-                  label: Text("Nama Santri"),
-                ),
+              const Padding(padding: EdgeInsets.all(10.0)),
+              InputFormField(
+                textEditingController: controllerNamaSantri,
+                labelText: "Nama Santri",
+                hintText: "Masukkan nama santri (huruf kapital)",
+                hintTextStyle: const TextStyle(fontSize: 15),
+                borderColor: Colors.blue,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                borderRadius: BorderRadius.circular(10),
+                errorPadding: const EdgeInsets.only(left: 10, top: 10),
+                validator: (v) {
+                  if (v != null && v.isEmpty) {
+                    return "Required";
+                  }
+                  return null;
+                },
               ),
-              TextField(
-                controller: controllerJenisByr,
-                decoration: const InputDecoration(
-                  hintText: "Jenis Pembayaran",
-                  label: Text("Jenis Pembayaran"),
-                ),
+              const Padding(padding: EdgeInsets.all(10.0)),
+              InputFormField(
+                textEditingController: controllerJenisByr,
+                labelText: "Jenis Pembayaran",
+                hintText: "Masukkan jenis pembayaran",
+                hintTextStyle: const TextStyle(fontSize: 15),
+                borderColor: Colors.blue,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                borderRadius: BorderRadius.circular(10),
+                errorPadding: const EdgeInsets.only(left: 10, top: 10),
+                validator: (v) {
+                  if (v != null && v.isEmpty) {
+                    return "Required";
+                  }
+                  return null;
+                },
               ),
-              TextField(
-                controller: controllerJumlahByr,
-                decoration: const InputDecoration(
-                  hintText: "Jumlah Pembayaran",
-                  label: Text("Jumlah Pembayaran"),
-                ),
+              const Padding(padding: EdgeInsets.all(10.0)),
+              InputFormField(
+                textEditingController: controllerJumlahByr,
+                labelText: "Jumlah Pembayaran",
+                hintText: "Masukkan jumlah bayar",
+                hintTextStyle: const TextStyle(fontSize: 15),
+                borderColor: Colors.blue,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                borderRadius: BorderRadius.circular(10),
+                errorPadding: const EdgeInsets.only(left: 10, top: 10),
+                validator: (v) {
+                  if (v != null && v.isEmpty) {
+                    return "Required";
+                  }
+                  return null;
+                },
               ),
-              TextField(
-                controller: controllerBln,
-                decoration: const InputDecoration(
-                  hintText: "Bulan",
-                  label: Text("Bulan"),
-                ),
+              const Padding(padding: EdgeInsets.all(10.0)),
+              InputFormField(
+                textEditingController: controllerBln,
+                labelText: "Bulan",
+                hintText: "Masukkan bulan pembayaran",
+                hintTextStyle: const TextStyle(fontSize: 15),
+                borderColor: Colors.blue,
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                borderRadius: BorderRadius.circular(10),
+                errorPadding: const EdgeInsets.only(left: 10, top: 10),
+                validator: (v) {
+                  if (v != null && v.isEmpty) {
+                    return "Required";
+                  }
+                  return null;
+                },
               ),
               const Padding(
                 padding: EdgeInsets.all(10.0),
@@ -113,13 +165,13 @@ void getPDF() async {
   //buat page
   pdf.addPage(
     pw.Page(
-      pageFormat: PdfPageFormat.a4,
+      pageFormat: pd.PdfPageFormat.a4,
       build: (pw.Context context) {
         return pw.Column(
           children: [
             pw.Container(
                 alignment: pw.Alignment.center,
-                color: PdfColors.green600,
+                color: pd.PdfColors.green600,
                 width: double.infinity,
                 child: pw.Text("KWITANSI",
                     style: pw.TextStyle(
