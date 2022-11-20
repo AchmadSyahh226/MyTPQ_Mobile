@@ -26,7 +26,7 @@ class _bayarSPPState extends State<BayarSPP> {
   TextEditingController controllerBln = TextEditingController();
 
   final phoneFormatter = MaskTextInputFormatter(
-      mask: '(+##) ###-####-####', type: MaskAutoCompletionType.lazy);
+      mask: '####-####-####', type: MaskAutoCompletionType.lazy);
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +114,7 @@ class _bayarSPPState extends State<BayarSPP> {
                       borderRadius: BorderRadius.circular(10.0)),
                   labelText: "Nomor Telepon",
                   labelStyle: const TextStyle(fontSize: 15),
-                  hintText: "Masukkan nomor telepon",
+                  hintText: "####-####-####",
                   hintStyle: const TextStyle(fontSize: 15),
                   prefixIcon: const Icon(Icons.phone)),
             ),
@@ -173,7 +173,7 @@ class _bayarSPPState extends State<BayarSPP> {
                   prefixIcon: const Icon(Icons.receipt)),
             ),
             const Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(5.0),
             ),
             ElevatedButton(
                 onPressed: () {
