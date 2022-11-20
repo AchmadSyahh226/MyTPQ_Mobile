@@ -43,6 +43,7 @@ dependencies:
   pdf: ^3.6.2
   syncfusion_flutter_pdf: ^20.3.57
   input_form_field: ^0.0.5
+  mask_text_input_formatter: ^2.4.0
 
 dev_dependencies:
   flutter_test:
