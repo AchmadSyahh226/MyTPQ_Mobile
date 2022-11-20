@@ -146,7 +146,79 @@ class _bayarSPPState extends State<BayarSPP> {
                 padding: EdgeInsets.all(10.0),
               ),
               ElevatedButton(
-                  onPressed: () => getPDF(),
+                  onPressed: () {
+                    var nmTerima = controllerNamaTerima.text;
+                    var nmSantri = controllerNamaSantri.text;
+                    var jnsByr = controllerJenisByr.text;
+                    var jmlByr = controllerJumlahByr.text;
+                    var bln = controllerBln.text;
+                    void getPDF() async {
+                      final pdf = pw.Document();
+
+                      //buat page
+                      pdf.addPage(
+                        pw.Page(
+                          pageFormat: pd.PdfPageFormat.a4,
+                          build: (pw.Context context) {
+                            return pw.Column(
+                              children: [
+                                pw.Container(
+                                    alignment: pw.Alignment.center,
+                                    color: pd.PdfColors.green600,
+                                    width: double.infinity,
+                                    child: pw.Text("KWITANSI",
+                                        style: pw.TextStyle(
+                                            fontSize: 50,
+                                            fontWeight: pw.FontWeight.bold))),
+                                pw.Container(
+                                    alignment: pw.Alignment.center,
+                                    width: double.infinity,
+                                    child: pw.Text("${DateTime.now()} \n\n\n",
+                                        style:
+                                            const pw.TextStyle(fontSize: 20))),
+                                pw.Container(
+                                    alignment: pw.Alignment.centerLeft,
+                                    width: double.infinity,
+                                    child: pw.Text(
+                                        "\n\n"
+                                        "Penerima : $nmTerima\n\n"
+                                        "Nama Santri : $nmSantri\n\n"
+                                        "Jenis Pembayaran : $jnsByr\n\n"
+                                        "Jumlah Bayar : Rp$jmlByr\n\n"
+                                        "Bulan : $bln\n",
+                                        style:
+                                            const pw.TextStyle(fontSize: 25))),
+                                pw.Container(
+                                    alignment: pw.Alignment.bottomRight,
+                                    width: double.infinity,
+                                    child: pw.Text(
+                                        "\n\n\n\n\n\n\n\n\n\n\n\n\nTTD \n"
+                                        "\n\n"
+                                        "($nmTerima)",
+                                        style:
+                                            const pw.TextStyle(fontSize: 25))),
+                              ],
+                            );
+                          },
+                        ),
+                      ); // Page
+
+                      // simpan pdf
+                      Uint8List bytes = await pdf.save();
+
+                      //buat file kosong di directory
+                      final dir = await getApplicationDocumentsDirectory();
+                      final file = File('${dir.path}/myinvoice.pdf');
+
+                      //timpa file kosong
+                      await file.writeAsBytes(bytes);
+
+                      // buka pdf
+                      await OpenFile.open(file.path);
+                    }
+
+                    getPDF();
+                  },
                   child: const Text(
                     "PRINT",
                   )),
@@ -156,66 +228,4 @@ class _bayarSPPState extends State<BayarSPP> {
       ),
     );
   }
-}
-
-void getPDF() async {
-  //buat class pdf
-  final pdf = pw.Document();
-
-  //buat page
-  pdf.addPage(
-    pw.Page(
-      pageFormat: pd.PdfPageFormat.a4,
-      build: (pw.Context context) {
-        return pw.Column(
-          children: [
-            pw.Container(
-                alignment: pw.Alignment.center,
-                color: pd.PdfColors.green600,
-                width: double.infinity,
-                child: pw.Text("KWITANSI",
-                    style: pw.TextStyle(
-                        fontSize: 50, fontWeight: pw.FontWeight.bold))),
-            pw.Container(
-                alignment: pw.Alignment.center,
-                width: double.infinity,
-                child: pw.Text("${DateTime.now()} \n\n\n",
-                    style: const pw.TextStyle(fontSize: 20))),
-            pw.Container(
-                alignment: pw.Alignment.centerLeft,
-                width: double.infinity,
-                child: pw.Text(
-                    "\n\n"
-                    "Penerima : \n\n"
-                    "Nama Santri : \n\n"
-                    "Jenis Pembayaran : SPP\n\n"
-                    "Jumlah Bayar : \n\n"
-                    "Bulan : \n",
-                    style: const pw.TextStyle(fontSize: 25))),
-            pw.Container(
-                alignment: pw.Alignment.bottomRight,
-                width: double.infinity,
-                child: pw.Text(
-                    "\n\n\n\n\n\n\n\n\n\n\n\n\nTTD \n"
-                    "\n\n"
-                    "Penerima",
-                    style: const pw.TextStyle(fontSize: 25))),
-          ],
-        );
-      },
-    ),
-  ); // Page
-
-  // simpan pdf
-  Uint8List bytes = await pdf.save();
-
-  //buat file kosong di directory
-  final dir = await getApplicationDocumentsDirectory();
-  final file = File('${dir.path}/myinvoice.pdf');
-
-  //timpa file kosong
-  await file.writeAsBytes(bytes);
-
-  // buka pdf
-  await OpenFile.open(file.path);
 }
