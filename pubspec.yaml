@@ -41,6 +41,8 @@ dependencies:
   path_provider: ^2.0.2
   get: ^4.3.8
   pdf: ^3.6.2
+  syncfusion_flutter_pdf: ^20.3.57
+  input_form_field: ^0.0.5
 
 dev_dependencies:
   flutter_test:
