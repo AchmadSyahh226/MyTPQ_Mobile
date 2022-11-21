@@ -6,6 +6,7 @@ import 'package:mytpqmobile/spp.dart';
 import 'package:mytpqmobile/tentang.dart';
 
 void main() => runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyTPQ(),
     ));
 
