@@ -6,7 +6,6 @@ import 'package:mytpqmobile/spp.dart';
 import 'package:mytpqmobile/tentang.dart';
 
 void main() => runApp(const MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: MyTPQ(),
     ));
 
@@ -126,7 +125,7 @@ class MyMenu2 extends StatelessWidget {
               size: 80,
               color: Colors.grey,
             ),
-            Text("Pembayaran",
+            Text("SPP",
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
