@@ -57,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
-  convert:
-    dependency: transitive
-    description:
-      name: convert
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
   crypto:
     dependency: transitive
     description:
@@ -104,6 +97,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_currency_formatter:
+    dependency: "direct main"
+    description:
+      name: flutter_currency_formatter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -169,7 +169,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.0"
+    version: "0.16.1"
   js:
     dependency: transitive
     description:
@@ -371,6 +371,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+<<<<<<< HEAD
   syncfusion_flutter_core:
     dependency: transitive
     description:
@@ -385,6 +386,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "20.3.57"
+=======
+>>>>>>> 463ae058c7beccf092c4b5b19b0f63b999d7d447
   term_glyph:
     dependency: transitive
     description:
