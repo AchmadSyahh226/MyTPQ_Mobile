@@ -249,7 +249,7 @@ class _DoaAwalState extends State<DoaAwal> {
                         "\n"
                         "7. Doa Pembuka Hati & Doa Belajar \n"
                         "رَضِتُ بِااللهِ رَبَا وَبِالْاِسْلاَمِ دِيْنَا وَبِمُحَمَّدٍ نَبِيَا وَرَسُوْلاَ رَبِّ زِدْ نِيْ عِلْمًـاوَرْزُقْنِـيْ فَهْمًـا\n",
-                        textAlign: TextAlign.left),
+                        textAlign: TextAlign.center),
                     Text(
                         " رَضِيْتُ بِاللهِ رَبًّا، وَبِالإِسْلَامِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا وَرَسُوْلًا"
                         "  رَبِّ ٱشْرَحْ لِى صَدْرِى وَيَسِّرْ لِىٓ أَمْرِى وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِى يَفْقَهُوا۟ قَوْلِى"
@@ -278,7 +278,7 @@ class _DoaAwalState extends State<DoaAwal> {
                         "14. Infaq \n"
                         "15. Pengumuman \n"
                         "16. Mengaji sesuai jilid masing-masing \n",
-                        textAlign: TextAlign.left),
+                        textAlign: TextAlign.center),
                   ],
                 ),
               ),
@@ -339,13 +339,13 @@ class _NiatSholatState extends State<NiatSholat> {
                   Text(
                       "\n1. SHOLAT SUBUH"
                       "\n أُصَلِّى فَرْضَ الصُّبْح رَكَعتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
-                      "\n2. SHOLAT DHUHUR"
+                      "\n\n2. SHOLAT DHUHUR"
                       "\n اُصَلِّيْ فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
-                      "\n3. SHOLAT ASHAR"
+                      "\n\n3. SHOLAT ASHAR"
                       "\n أُصَلِّى فَرْضَ العَصْرِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى"
-                      "\n4. SHOLAT MAGHRIB"
+                      "\n\n4. SHOLAT MAGHRIB"
                       "\n أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ"
-                      "\n5. SHOLAT ISYA"
+                      "\n\n5. SHOLAT ISYA"
                       "\n أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى",
                       textAlign: TextAlign.left),
                 ],
@@ -402,7 +402,9 @@ class _PanduanSholatState extends State<PanduanSholat> {
                   Text("PANDUAN SHOLAT",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text("\nSyarat Sholat \n", textAlign: TextAlign.left),
+                  Text("\nSyarat Sholat \n",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
                       "1. Beragama Islam\n"
                       "2. Mumayyiz\n"
@@ -416,11 +418,13 @@ class _PanduanSholatState extends State<PanduanSholat> {
                       "10. Tidak dalam keraguan\n"
                       "11. Tidak menggantungkan kebatalan shalatnya dengan sesuatu apa pun\n",
                       textAlign: TextAlign.left),
-                  Text("\nRukun Sholat \n", textAlign: TextAlign.left),
+                  Text("\nRukun Sholat \n",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
                       "Niat, takbiratulihram sambil memasang niat, berdiri jika mampu, membaca Al-fatihah, ruku', i'tidal,"
                       "sujud, duduk diantara dua sujud, thuma'ninah, tasyahud akhir, membaca sholawat nabi, salam, tertib.",
-                      textAlign: TextAlign.left),
+                      textAlign: TextAlign.center),
                 ],
               ),
             ),
@@ -477,18 +481,19 @@ class _PanduanWudhuState extends State<PanduanWudhu> {
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(
                       "1. Membaca basmalah\n"
+                      "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم\n\n"
                       "2. Cuci tangan sampai ke pergelangan tangan 3x\n"
                       "3. Kumur-kumur 3x\n"
                       "4. Memasukkan air ke dalam hidung 3x\n"
                       "5. Membaca niat wudhu : \n"
-                      "نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ اْلاَصْغَرِ فَرْضًا ِللهِ تَعَالَى\n"
+                      "نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ اْلاَصْغَرِ فَرْضًا ِللهِ تَعَالَى\n\n"
                       "6. Cuci muka 3x, dari garis rambut ke dagu dan dari telinga ke telinga, pastikan seluruh wajah, alis, bawah hidung dan bibir dicuci\n"
                       "7. Cuci lengan dan tangan dari ujung jari sampai siku 3x\n"
                       "8. Usap kepala mulai dengan tangan di depan kepala, bawa ke belakang kepala dan kemudian kembali ke depan lagi 3x\n"
                       "9. Cuci kaki 3x hingga mata kaki, pastikan untuk menyeka sela-sela jari kaki dengan jari kelingking\n"
                       "10. Akhiri wudhu dengan doa : \n"
                       "َ اشْهَدُ أَنْ لَاإِلٰهَ إِلَّااللهُ وَحْدَهُ لَاشَرِيْكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًاعَبْدُهُ وَرَسُوْلُهُ. اَللّٰهُمَّ اجْعَلْنِيْ مِنَ التَّوَّابِيْنَ وَاجْعَلْنِيْ مِنَ الْمُتَطَهِّرِيْنَ وَجْعَلْنِيْ مِنْ عِبَادِكَ الصَّالِحِيْنَ\n",
-                      textAlign: TextAlign.left)
+                      textAlign: TextAlign.center)
                 ],
               ),
             ),
